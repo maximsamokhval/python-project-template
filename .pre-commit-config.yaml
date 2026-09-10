@@ -1,0 +1,119 @@
+minimum_pre_commit_version: "4.4.0"
+
+default_install_hook_types:
+  - pre-commit
+  - pre-push
+  - commit-msg
+
+default_stages:
+  - pre-commit
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-added-large-files
+        args: ["--maxkb=500"]
+      - id: check-json
+      - id: check-yaml
+      - id: mixed-line-ending
+        args: ["--fix=lf"]
+      - id: check-merge-conflict
+      - id: check-case-conflict
+      - id: check-symlinks
+      - id: destroyed-symlinks
+      - id: check-illegal-windows-names
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+      - id: check-ast
+      - id: debug-statements
+
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v4.4.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.4.3
+    hooks:
+      - id: codespell
+
+  - repo: https://github.com/ComPWA/taplo-pre-commit
+    rev: v0.9.3
+    hooks:
+      - id: taplo-format
+      - id: taplo-lint
+        # v0.9.3 cannot parse the current remote schema catalog. Keep the
+        # deterministic TOML syntax and duplicate-key check local instead.
+        args: ["--no-schema"]
+
+  - repo: local
+    hooks:
+      - id: ruff-check
+        name: Ruff lint
+        entry: >
+          uv run --locked ruff check --fix --force-exclude
+        language: system
+        types_or: [python, pyi, jupyter]
+
+      - id: ruff-format
+        name: Ruff format
+        entry: >
+          uv run --locked ruff format --force-exclude
+        language: system
+        types_or: [python, pyi, jupyter]
+
+      - id: ty
+        name: Ty type check
+        entry: >
+          uv run --locked ty check --error all .
+        language: system
+        pass_filenames: false
+        files: >
+          (?x)^(.*\.pyi?|pyproject\.toml|uv\.lock)$
+
+      # Enable only after `uv run tach init` creates reviewed architecture rules.
+      # - id: tach
+      #   name: Tach architecture check
+      #   entry: uv run --locked tach check
+      #   language: system
+      #   pass_filenames: false
+
+      - id: detect-secrets
+        name: Detect secrets
+        entry: >
+          uv run --locked detect-secrets-hook --baseline .secrets.baseline
+        language: system
+
+      - id: nbstripout
+        name: Strip notebook outputs
+        entry: uv run --locked nbstripout
+        language: system
+        files: \.ipynb$
+
+      - id: check-jsonschema-github-workflows
+        name: Validate GitHub Actions workflows
+        entry: >
+          uv run --locked check-jsonschema --builtin-schema github-workflows
+        language: system
+        files: ^\.github/workflows/.*\.ya?ml$
+
+      - id: uv-lock-check
+        name: Check uv lockfile
+        entry: uv lock --check
+        language: system
+        pass_filenames: false
+        files: ^(pyproject\.toml|uv\.lock)$
+
+      - id: pytest-full
+        name: Pytest + Hypothesis + coverage
+        entry: >
+          uv run --locked pytest -q --cov --cov-branch
+          --cov-report=term-missing:skip-covered
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-push]
