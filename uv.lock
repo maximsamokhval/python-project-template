@@ -291,6 +291,25 @@ wheels = [
 ]
 
 [[package]]
+name = "guardian-type-enforcer"
+version = "4.0.6"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/88/a5/7c971808162458bdab7da28ff6a50a97702f0a93d379a2808c186a71c66f/guardian_type_enforcer-4.0.6-cp314-cp314-macosx_10_15_x86_64.whl", hash = "sha256:358f4246a381e731322f8caea4afb52dd3fafc08513cdf96cc96f994b50f030e", size = 17734, upload-time = "2026-07-13T12:47:41.83Z" },
+    { url = "https://files.pythonhosted.org/packages/7f/41/30b155e4715eba2732013134b8baaf1e8014f215ac3569721e376c0d8f00/guardian_type_enforcer-4.0.6-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:11798302ac68ab88e5eab101de2e5822f8100df486cc48a5f3608e24df64ee44", size = 18339, upload-time = "2026-07-13T12:47:42.848Z" },
+    { url = "https://files.pythonhosted.org/packages/38/55/8d9fc8db969acdcd55c4d7fba1610ae9c5be87bc62ca820fb5c817a55ffb/guardian_type_enforcer-4.0.6-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:8bcd8dd2593aa8edc370db6071ea1cd42898068f123618634227d03583353365", size = 40606, upload-time = "2026-07-13T12:47:43.85Z" },
+    { url = "https://files.pythonhosted.org/packages/81/9b/bb0e5e1d6b803d214c09522ebcdc11b50958b231d8a66bed7f41115f76ec/guardian_type_enforcer-4.0.6-cp314-cp314-musllinux_1_2_x86_64.whl", hash = "sha256:1ab095109ad6017712e1e1db11c245ea3f17a057ba52f5d33332b189a43c427c", size = 40271, upload-time = "2026-07-13T12:47:44.755Z" },
+    { url = "https://files.pythonhosted.org/packages/83/5d/a26066f282fe80a152d455766ce025162794ce1f6d12be65c08ebcafb22d/guardian_type_enforcer-4.0.6-cp314-cp314-win32.whl", hash = "sha256:40eeee1f5544f46fe54190c47859c639d883ccc9da1dee8073830a4ce255a70a", size = 18515, upload-time = "2026-07-13T12:47:45.665Z" },
+    { url = "https://files.pythonhosted.org/packages/ec/99/1c4938051e2e17aec59c00c7c034ea435aa5b9b60d497ff846ef4c911c53/guardian_type_enforcer-4.0.6-cp314-cp314-win_amd64.whl", hash = "sha256:7d72575d621aaa348025974e9be0889c29e3bfb043af29fb161bd3005a8a97f4", size = 19342, upload-time = "2026-07-13T12:47:47.105Z" },
+    { url = "https://files.pythonhosted.org/packages/36/68/ee1e026c8a2b780f71c310b7f07f66174bca745b9e0aa159874db67cea0d/guardian_type_enforcer-4.0.6-cp314-cp314t-macosx_10_15_x86_64.whl", hash = "sha256:6f80dd5c527a99c52961925dab003b20e14933455d4d29ab92e99239fa975f4e", size = 18277, upload-time = "2026-07-13T12:47:48.113Z" },
+    { url = "https://files.pythonhosted.org/packages/c6/8d/21e77e160b7e04b034fda5e59e743ea478d2dc6277be9fd6d2bd17659633/guardian_type_enforcer-4.0.6-cp314-cp314t-macosx_11_0_arm64.whl", hash = "sha256:bfe3206cfd9035c6295811600158f415d538fcf30011e694e4e5d98db37fee6d", size = 18888, upload-time = "2026-07-13T12:47:48.946Z" },
+    { url = "https://files.pythonhosted.org/packages/35/d3/16b1f95ec41c1585019ce4cb5304359cb5cc30115449c4553f58a2dd35ce/guardian_type_enforcer-4.0.6-cp314-cp314t-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:ceba087ef7dd91b1e733725b58a2b5d70d00e80ea36bdd4f3090fb83f040d78a", size = 52582, upload-time = "2026-07-13T12:47:49.885Z" },
+    { url = "https://files.pythonhosted.org/packages/b4/82/7aa6593e23258db579ef93c78b15026a70c6b73448dc5974f3f7315eb804/guardian_type_enforcer-4.0.6-cp314-cp314t-musllinux_1_2_x86_64.whl", hash = "sha256:44000cfbc549969167329bace0e7e5f52891da140a81c8abc94ef3a1c778297b", size = 51260, upload-time = "2026-07-13T12:47:50.876Z" },
+    { url = "https://files.pythonhosted.org/packages/5b/13/6483334f2ded10ead4b7dd21599f577d3d6ebd3563ed0f35c3678b1342e8/guardian_type_enforcer-4.0.6-cp314-cp314t-win32.whl", hash = "sha256:4daaf13206950bcc95787ac34b7aa075826d780b0b54a700abeaf0964d007622", size = 18878, upload-time = "2026-07-13T12:47:51.875Z" },
+    { url = "https://files.pythonhosted.org/packages/10/9a/ea123afaae65a441b9be71ae517fb366b2700cdddcef564f4cfa89fcf39a/guardian_type_enforcer-4.0.6-cp314-cp314t-win_amd64.whl", hash = "sha256:5bdb1a1d1b20012290c91ad0d3b39ca6be02bafc9f3e94965382fe7d5d3a9275", size = 19658, upload-time = "2026-07-13T12:47:52.824Z" },
+]
+
+[[package]]
 name = "hypothesis"
 version = "6.168.0"
 source = { registry = "https://pypi.org/simple" }
@@ -567,6 +586,25 @@ wheels = [
 ]
 
 [[package]]
+name = "pyrefly"
+version = "1.3.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/7d/82/df301034ff7705b51ab212039958910434e1e9bd4765cde435538221fc35/pyrefly-1.3.0.tar.gz", hash = "sha256:e96a0bf3abdc41cf40f7d2ef274bb610f4e6e4b387b366aea102902839073388", size = 6678024, upload-time = "2026-09-11T00:41:37.196Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/36/98/47bf19b6caef77852c7e1c03d71ef48a5f452bf041503d883e0bca6fc4c8/pyrefly-1.3.0-py3-none-macosx_10_12_x86_64.whl", hash = "sha256:dd6c61e4c307eaaf3cf25fb329c4e7c9ff0376c42d5900362be2fd3333578a69", size = 15088089, upload-time = "2026-09-11T00:41:11.046Z" },
+    { url = "https://files.pythonhosted.org/packages/4c/77/454615aa5db04903c99ced321295e32242c4b188be1a08f40b617ed72984/pyrefly-1.3.0-py3-none-macosx_11_0_arm64.whl", hash = "sha256:14c56defaa804747f18e03d11b539e71b71c8251a2b9f58e73dea80e2f6adfd9", size = 14431422, upload-time = "2026-09-11T00:41:13.61Z" },
+    { url = "https://files.pythonhosted.org/packages/01/f2/142e190b9432f802682b0b0794f71e2010e936de0541492cc43678d647af/pyrefly-1.3.0-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:64285b1261681933f97cb11f3ba2e4445ff02a266707e4e2b7a279db0424c9f2", size = 14880659, upload-time = "2026-09-11T00:41:15.947Z" },
+    { url = "https://files.pythonhosted.org/packages/d9/2f/60598fe38f29f22d11d9f4b5c7fee1cbbb0d5b0cb7db6b373761d57f5f75/pyrefly-1.3.0-py3-none-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:46a90d6e48415dfa5d8d9c94ea5b9b61d7149dab87348952f2e000cf45145664", size = 16116073, upload-time = "2026-09-11T00:41:18.547Z" },
+    { url = "https://files.pythonhosted.org/packages/c2/0a/33e49756fe3341dbb13789622cb8c9b6350d2710ceb47b8b0521f134ceea/pyrefly-1.3.0-py3-none-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:e0cc33b35204b8e1b09396313024580d25a041de2f2f527e6496fc099282b967", size = 16049648, upload-time = "2026-09-11T00:41:21.255Z" },
+    { url = "https://files.pythonhosted.org/packages/b0/fe/be59429726af4c0c3585951a937232d957182364cd2a621f74f4298a176e/pyrefly-1.3.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e94ff692911596d257462320a2ef1435c93c20c80d631404961282f4cc22a6cc", size = 15439725, upload-time = "2026-09-11T00:41:23.572Z" },
+    { url = "https://files.pythonhosted.org/packages/2b/73/bb834e88afea6c0de6960be2102c0cc1d817193c1efc3f6db9b450df191c/pyrefly-1.3.0-py3-none-musllinux_1_2_aarch64.whl", hash = "sha256:5705bec5438aa4e3b65b0d2ea7613f6bdbdc57f8848bd4b7940bbab37f230d8c", size = 14900386, upload-time = "2026-09-11T00:41:25.717Z" },
+    { url = "https://files.pythonhosted.org/packages/c7/64/1adbc6ece9090bbd2e4ed1300918ab709166119426a21102639912ea65bb/pyrefly-1.3.0-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:fe60cb6d7cdf6c9bb236c0a7efc4b9839cfe7ef834b07d637862f95a642699ef", size = 15478065, upload-time = "2026-09-11T00:41:28.049Z" },
+    { url = "https://files.pythonhosted.org/packages/d0/5c/e1351611d2e205718394237381220ab70f0e21cb297db024eafead19acf9/pyrefly-1.3.0-py3-none-win32.whl", hash = "sha256:4fb4cd5e5007e99208e44f749edaf37a03c0a56c98da7422c2dd60fde0f294b0", size = 14130445, upload-time = "2026-09-11T00:41:30.401Z" },
+    { url = "https://files.pythonhosted.org/packages/3c/92/1d78e2ab1f9f1055ea43164d336903c95e608bede06ed182dc4b4f2c5390/pyrefly-1.3.0-py3-none-win_amd64.whl", hash = "sha256:f809fa5b447012adb8861efeb8f6435146788a39d9251d79dc38731a5d241893", size = 15067598, upload-time = "2026-09-11T00:41:32.582Z" },
+    { url = "https://files.pythonhosted.org/packages/b3/6f/459f56dc345c32f8597acef13675e7e67679fb56bc3fd8f0a280eaeb8c02/pyrefly-1.3.0-py3-none-win_arm64.whl", hash = "sha256:3a3fb7c07dfb9b43d4205d8e85a83aaefc85377d0437dc8469c132836a8a7e5d", size = 14347403, upload-time = "2026-09-11T00:41:35.01Z" },
+]
+
+[[package]]
 name = "pytest"
 version = "9.1.1"
 source = { registry = "https://pypi.org/simple" }
@@ -629,9 +667,11 @@ source = { editable = "." }
 dev = [
     { name = "check-jsonschema" },
     { name = "detect-secrets" },
+    { name = "guardian-type-enforcer" },
     { name = "hypothesis" },
     { name = "nbstripout" },
     { name = "pre-commit" },
+    { name = "pyrefly" },
     { name = "pytest" },
     { name = "pytest-asyncio" },
     { name = "pytest-cov" },
@@ -640,11 +680,13 @@ dev = [
     { name = "ty" },
 ]
 lint = [
+    { name = "pyrefly" },
     { name = "ruff" },
     { name = "tach" },
     { name = "ty" },
 ]
 test = [
+    { name = "guardian-type-enforcer" },
     { name = "hypothesis" },
     { name = "pytest" },
     { name = "pytest-asyncio" },
@@ -657,9 +699,11 @@ test = [
 dev = [
     { name = "check-jsonschema" },
     { name = "detect-secrets" },
+    { name = "guardian-type-enforcer" },
     { name = "hypothesis" },
     { name = "nbstripout" },
     { name = "pre-commit" },
+    { name = "pyrefly" },
     { name = "pytest" },
     { name = "pytest-asyncio" },
     { name = "pytest-cov" },
@@ -668,11 +712,13 @@ dev = [
     { name = "ty" },
 ]
 lint = [
+    { name = "pyrefly" },
     { name = "ruff" },
     { name = "tach" },
     { name = "ty" },
 ]
 test = [
+    { name = "guardian-type-enforcer" },
     { name = "hypothesis" },
     { name = "pytest" },
     { name = "pytest-asyncio" },

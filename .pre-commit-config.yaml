@@ -75,6 +75,15 @@ repos:
         files: >
           (?x)^(.*\.pyi?|pyproject\.toml|uv\.lock)$
 
+      - id: pyrefly
+        name: Pyrefly type check
+        entry: >
+          uv run --locked pyrefly check
+        language: system
+        pass_filenames: false
+        files: >
+          (?x)^(.*\.pyi?|pyproject\.toml|uv\.lock)$
+
       # Enable only after `uv run tach init` creates reviewed architecture rules.
       # - id: tach
       #   name: Tach architecture check
@@ -107,6 +116,14 @@ repos:
         language: system
         pass_filenames: false
         files: ^(pyproject\.toml|uv\.lock)$
+
+      - id: guardian-import-check
+        name: Guardian import check
+        entry: >
+          uv run --locked python -c "import guardian; print('Guardian loaded')"
+        language: system
+        pass_filenames: false
+        always_run: true
 
       - id: pytest-full
         name: Pytest + Hypothesis + coverage

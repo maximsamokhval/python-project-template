@@ -29,17 +29,50 @@ gh repo create my-project \
 uv add aiogram fastapi httpx
 ```
 
-## Перший запуск
+## Міні-інструкція
 
 Потрібні Python 3.14 і `uv` від 0.12.12 до 0.13.0 (не включно).
 
+### 1. Встановити залежності
+
 ```bash
+uv lock
 uv sync
+```
+
+`uv lock` фіксує нові залежності в `uv.lock`, а `uv sync` встановлює їх у
+локальне середовище, зокрема `pyrefly` і `guardian-type-enforcer`.
+
+### 2. Встановити pre-commit hooks
+
+```bash
 uv run pre-commit install --install-hooks
+```
+
+Це встановлює hooks для `pre-commit`, `pre-push` і `commit-msg` відповідно до
+`default_install_hook_types`. Якщо віртуальне середовище вже активоване,
+допустима коротка форма: `pre-commit install --install-hooks`.
+
+### 3. Виконати першу повну перевірку
+
+```bash
 make verify
 uv run pre-commit run --all-files
 uv run pre-commit run --all-files --hook-stage pre-push
 ```
+
+Переконайтеся, що серед успішних hooks є `Pyrefly type check` і
+`Guardian import check`.
+
+### 4. Запускати Pyrefly вручну
+
+```bash
+uv run pyrefly check
+uv run pyrefly check src/
+```
+
+Конфігурація береться з `[tool.pyrefly]` у `pyproject.toml`: `preset =
+"strict"` і `project-includes = ["src", "tests"]`.
 
 `uv.lock` є частиною репозиторію: не видаляйте його й не редагуйте вручну.
 
