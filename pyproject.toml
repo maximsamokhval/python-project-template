@@ -135,6 +135,7 @@ htmlcov,
 dist,
 build,
 uv.lock,
+pnpm-lock.yaml,
 *.svg,
 *.min.js,
 *.min.css

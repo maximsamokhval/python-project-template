@@ -1,0 +1,12 @@
+packages:
+  - frontend
+
+minimumReleaseAge: 1440
+minimumReleaseAgeStrict: true
+blockExoticSubdeps: true
+strictDepBuilds: true
+verifyDepsBeforeRun: error
+disallowWorkspaceCycles: true
+
+allowBuilds:
+  esbuild: true

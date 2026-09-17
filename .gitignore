@@ -17,3 +17,12 @@ htmlcov/
 .pytest_cache/
 .ruff_cache/
 .ty/
+
+# Frontend dependencies and generated artifacts
+node_modules/
+frontend/coverage/
+frontend/dist/
+frontend/playwright-report/
+frontend/test-results/
+frontend/.vite/
+*.tsbuildinfo
