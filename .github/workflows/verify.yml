@@ -115,4 +115,6 @@ jobs:
       upload-sarif: false
       fail-on-vuln: false
     permissions:
+      actions: read
       contents: read
+      security-events: write
