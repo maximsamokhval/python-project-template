@@ -17,6 +17,7 @@ htmlcov/
 .pytest_cache/
 .ruff_cache/
 .ty/
+mutants/
 
 # Frontend dependencies and generated artifacts
 node_modules/

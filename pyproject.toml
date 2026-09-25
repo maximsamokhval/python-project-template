@@ -16,6 +16,7 @@ lint = ["ruff", "ty", "tach", "pyrefly"]
 test = [
   "guardian-type-enforcer",
   "hypothesis",
+  "mutmut>=3.8.0",
   "pytest",
   "pytest-asyncio",
   "pytest-cov",
@@ -106,6 +107,10 @@ markers = [
   "e2e: наскрізні сценарії системи",
   "slow: довгі перевірки, які не запускаються у швидкому циклі",
 ]
+
+[tool.mutmut]
+source_paths = ["src/"]
+pytest_add_cli_args_test_selection = ["tests/"]
 
 [tool.coverage.run]
 branch = true

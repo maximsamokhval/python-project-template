@@ -72,6 +72,10 @@ uv run pre-commit run --all-files --hook-stage pre-push
 `make verify-browser` запускає Chromium component/E2E tests та axe. `make
 verify-security` звертається до advisory services, тому є окремою online-перевіркою.
 
+Mutation testing виконується hook-ом `mutmut` на стадії `pre-push`; запустити його
+окремо можна командою `uv run mutmut run`. `mutmut` потребує POSIX `fork`, тому на
+Windows запускайте його з WSL.
+
 Локальні hooks можна обійти через `--no-verify`. GitHub Actions повторює ті самі
 команди у clean environment, але без branch protection workflow є evidence, а не
 технічно обов'язковим merge gate.

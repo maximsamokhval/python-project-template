@@ -85,6 +85,14 @@ repos:
         files: >
           (?x)^(.*\.pyi?|pyproject\.toml|uv\.lock)$
 
+      - id: mutmut
+        name: Mutmut mutation tests
+        entry: uv run --locked mutmut run
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-push]
+
       # Enable only after `uv run tach init` creates reviewed architecture rules.
       # - id: tach
       #   name: Tach architecture check
